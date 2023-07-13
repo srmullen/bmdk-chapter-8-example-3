@@ -30,6 +30,11 @@ app.get("/video", async (req, res) => { // Route for streaming video.
     fs.createReadStream(videoPath).pipe(res);
 });
 
+app.get('/test', async (req, res) => {
+    res.status(200);
+    return res.send('This is a test');
+});
+
 //
 // Starts the HTTP server.
 //
